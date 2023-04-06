@@ -44,6 +44,7 @@ btn.addEventListener('click', function () {
         // console.log(newWords.split(''))
         // console.log(randWords.join(''))
         msg.innerHTML = randWords;
+        document.querySelector('.guide').innerHTML = 'if you are dont understanding the answer please touch the guess button';
     }else{
         let tempWord = guess.value;
         if(tempWord === newWords){
