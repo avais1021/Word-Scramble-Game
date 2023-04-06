@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Word Scramble Game</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Carter+One&family=Open+Sans&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #20bf6b;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            line-height: 3;
+            background-color: #20bf6b;
+            padding: 0 10px;
+        }
+
+        h1 {
+            font-family: 'Carter One', cursive;
+            text-align: center;
+            color: white;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            text-shadow:
+                0 0.6px 0 #efefef,
+                0 1.2px 0 #efefef,
+                0 1.8px 0 #efefef,
+                0 30px 5px rgba(0, 0, 0, .1);
+        }
+
+        section {
+            height: 80vh;
+            background-color: #53ee9d;
+            padding: 20px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gameArea {
+            background-color: #20bf6b;
+            width: 700px;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 4px 4px 8px 2px black;
+            font-family: 'Source Sans Pro', sans-serif;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .msg {
+            font-size: 25px;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            margin-top: 25px;
+            box-shadow: 0px 0px 15px 8px white;
+            color: black;
+            background: white;
+            padding: 0px 15px;
+            font-family: math;
+            line-height: 37px;
+        }
+
+
+        .gameArea input {
+            border: none;
+            outline: none;
+            font-size: 25px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .gameArea button {
+            border: none;
+            font-size: 25px;
+            padding: 7px 10px;
+            margin-top: 30px;
+            background: #e5d6c2;
+            color: brown;
+            transition: 0.5s linear;
+            cursor: pointer;
+        }
+
+        .gameArea button:hover {
+            letter-spacing: 1px;
+            padding: 7px 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .rand_w {
+            color: red;
+        }
+
+        .new_w {
+            color: limegreen;
+        }
+
+        .score span {
+            color: red;
+            background: white;
+            font-weight: bold;
+            font-size: 25px;
+            padding: 2px 6px;
+           position: absolute;
+           top: 5px ;
+           left: 10px;
+        }
+
+        @media screen and (max-width:656.9px) {
+            header {
+                line-height: 2;
+            }
+
+            section {
+                background-color: #20bf6b;
+                padding: 20px 8px;
+            }
+
+            .gameArea {
+                min-height: 320px;
+                width: 100%;
+            }
+
+            h1 {
+                position: relative;
+                top: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>Guess the froot name</h1>
+    </header>
+
+    <section>
+        <div class="gameArea">
+            <div class="score"></div>
+            <h3 class="msg"></h3>
+            <input type="text" class="hidden">
+            <button class="btn">Click here to start</button>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
