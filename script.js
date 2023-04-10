@@ -8,7 +8,7 @@ const score = document.querySelector('.score');
 let play = false;
 let newWords = '';
 let randWords = '';
-let sWords = ['apple', 'Mango', 'guava', 'pappaya', 'blackcurrant', 'almond', 'cherry', 'dragon', 'kiwi', 'peach', 'pear', 'litchi', 'grapes',]
+let sWords = ['Apple', 'Mango', 'Guava', 'Pappaya', 'Blackcurrant', 'Almond', 'Cherry', 'Dragon', 'Kiwi', 'Peach', 'Pear', 'Litchi', 'Grapes',]
 var count = 0;
 
 const creatNeweWords = () => {
@@ -47,6 +47,10 @@ btn.addEventListener('click', function () {
         document.querySelector('.guide').innerHTML = 'if you are dont understanding the answer please touch the guess button';
     }else{
         let tempWord = guess.value;
+       tempWord = tempWord.charAt(0).toLowerCase() + tempWord.slice(1);
+      newWords =  newWords.charAt(0).toLowerCase() + newWords.slice(1);
+        console.log(tempWord)
+        console.log(newWords)
         if(tempWord === newWords){
             // console.log('correct')
             play = false;
